@@ -17,7 +17,7 @@
   }
 
   &__left-separator {
-    border: 1px groove $gray-100;
+    border: 1px groove $gray-200;
     margin-inline: map-get($gutters, "g-3");
     max-width: 0px;
     // width: 100%;

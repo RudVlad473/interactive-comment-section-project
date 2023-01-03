@@ -1,0 +1,40 @@
+@use "../abstracts/" as *;
+//@use "../comment" as c;
+
+.button {
+    //transition: opacity 0.05s ease-in-out;
+
+    border: 0;
+    border-radius: $br;
+
+    padding: map-get($gutters, "g-1") * 0.75 map-get($gutters, "g-1") * 0.5;
+
+    min-width: 6.75rem;
+    //max-width: 6.75rem;
+
+    font-weight: $bold;
+
+    color: white;
+
+    &--default {
+        background-color: $blue-300;
+    }
+
+    &--unfixed {
+        width: 100%;
+        min-width: none;
+        max-width: none;
+    }
+
+    &--gray {
+        background-color: $blue-200;
+    }
+
+    &--red {
+        background-color: $red-200;
+    }
+
+    &:hover {
+        opacity: 0.5;
+    }
+}

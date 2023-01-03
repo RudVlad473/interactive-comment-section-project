@@ -1,0 +1,10 @@
+@use "../../stylesheets/abstracts/gutters/" as g;
+
+.actions {
+  grid-area: actions;
+
+  display: flex;
+  
+  margin-inline-start: auto;
+  column-gap: map-get(g.$gutters, "g-2");
+}

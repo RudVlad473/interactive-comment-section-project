@@ -1,0 +1,9 @@
+.image {
+    max-width: 3rem;
+
+    margin-inline: auto;
+
+    &--small {
+        max-width: 2rem;
+    }
+}

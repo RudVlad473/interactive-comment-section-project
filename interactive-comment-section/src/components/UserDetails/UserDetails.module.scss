@@ -1,0 +1,13 @@
+@use "../../stylesheets/abstracts" as *;
+
+.user-details {
+    column-gap: map-get($gutters, "g-1");
+    justify-content: space-between;
+
+    &__when {
+        max-width: 200px;
+        
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}

@@ -1,0 +1,21 @@
+@use "../../stylesheets/abstracts/" as *;
+@use "../../stylesheets/components/comment" as c;
+
+.post-form {
+    display: grid;
+    grid-template-columns: 1fr 8fr 2fr;
+    column-gap: map-get($gutters, "g-2");
+
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: map-get($gutters, "g-2");
+
+    @extend c, .content-box !optional;
+}
+
+@media (max-width: 576px) {
+  .post-form {
+    padding: map-get($gutters, "g-2") * 0.75;
+  }
+}

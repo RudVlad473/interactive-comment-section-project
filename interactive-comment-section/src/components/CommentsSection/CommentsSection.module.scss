@@ -1,0 +1,13 @@
+@use "../../stylesheets/abstracts/" as *;
+
+.comments-section {
+  display: flex;
+  flex-direction: column;
+
+  gap: map-get($gutters, "g-1");
+
+  width: 100%;
+  max-width: 700px;
+
+  margin-inline: auto;
+}

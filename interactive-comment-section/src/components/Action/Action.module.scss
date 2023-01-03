@@ -1,0 +1,22 @@
+@use "../../stylesheets/abstracts/gutters/" as g;
+
+.action {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  gap: map-get(g.$gutters, "g-1") * 0.5;
+
+  transition: all 0.1s ease-in-out;
+
+  user-select: none;
+  cursor: pointer;
+
+  & > * {
+    pointer-events: none;
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
+}

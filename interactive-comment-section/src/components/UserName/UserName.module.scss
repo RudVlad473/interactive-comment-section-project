@@ -1,0 +1,11 @@
+@use "../../stylesheets/abstracts" as *;
+
+.username {
+    color: $blue-400;
+    font-weight: $bolder;
+
+    max-width: 200px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

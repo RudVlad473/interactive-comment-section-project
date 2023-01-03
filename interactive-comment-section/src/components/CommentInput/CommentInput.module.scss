@@ -1,0 +1,46 @@
+@use "../../stylesheets/abstracts" as *;
+
+.comment-area {
+
+    width: 100%;
+
+    padding: 0.5em 1.25em;
+
+    outline: 1px solid $gray-200;
+    border-radius: $br;
+    border: 1px solid transparent;
+
+    background-color: white;
+
+    transition: all 0.1s ease-in-out;
+
+    resize: none;
+
+    // &--disabled {
+    //     outline: 0;
+    //     border-radius: 0;
+    //     padding: 0;
+    //     overflow: auto;
+    // }
+
+    &:focus {
+        border-color: $blue-300;
+    }
+}
+
+textarea::-webkit-scrollbar {
+    width: 0.5em;
+
+    border-radius: 0 $br $br 0;
+}
+
+textarea::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+
+    border-radius: 0 $br $br 0;
+}

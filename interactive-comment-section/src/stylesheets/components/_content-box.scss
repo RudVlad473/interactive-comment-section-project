@@ -1,0 +1,8 @@
+@use "../../stylesheets/abstracts/" as *;
+
+.content-box {
+    display: flex;
+
+    border-radius: $br;
+    background-color: white;
+}

@@ -1,0 +1,59 @@
+$barHeight: 40;
+
+@mixin loadingPace($n) {
+    animation: 2s ease-in 1s infinite reverse both running #{$n}-loading;
+
+    @keyframes #{$n}-loading {
+        0% {
+            max-height: $barHeight - $n % $barHeight;
+        }
+
+        25% {
+            max-height: $barHeight - (2 * $n) % $barHeight;
+        }
+
+        50% {
+            max-height: $barHeight - (3 * $n) % $barHeight;
+        }
+
+        75% {
+            max-height: $barHeight - (4 * $n) % $barHeight;
+        }
+
+        100% {
+            max-height: $barHeight - (5 * $n) % $barHeight;
+        }
+    }
+}
+
+.animated-columns {
+    margin-inline: auto;
+
+    
+}
+
+rect {
+    animation: 2s ease-in 1s infinite reverse both running loading;
+}
+
+@keyframes loading {
+    0% {
+        max-height: $barHeight - 1 % $barHeight;
+    }
+
+    25% {
+        max-height: $barHeight - (2 * 2) % $barHeight;
+    }
+
+    50% {
+        max-height: $barHeight - (3 * 3) % $barHeight;
+    }
+
+    75% {
+        max-height: $barHeight - (4 * 4) % $barHeight;
+    }
+
+    100% {
+        max-height: $barHeight - (5 * 5) % $barHeight;
+    }
+}

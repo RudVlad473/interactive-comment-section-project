@@ -1,0 +1,58 @@
+@use "../../stylesheets/abstracts/" as *;
+@use "../../stylesheets/components/content-box" as c;
+
+.background {
+    min-width: 100%;
+    min-height: 100%;
+
+    top: 0;
+    left: 0;
+
+    position: fixed;
+    z-index: 666;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(0, 0, 0, 1);
+    opacity: 0.5;
+
+    pointer-events: none;
+}
+
+.modal {
+    position: fixed;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+
+    @extend c, .content-box !optional;
+    flex-direction: column;
+
+    color: $blue-200;
+
+    gap: map-get($gutters, "g-1");
+    padding: map-get($gutters, "g-3");
+
+    max-width: 22.5rem;
+
+    .header {
+        color: $blue-400;
+        font-weight: $bold;
+
+        font-size: 1.35em;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: space-between;
+
+        width: 100%;
+
+        gap: map-get($gutters, "g-1");
+
+        color: white;
+    }
+}

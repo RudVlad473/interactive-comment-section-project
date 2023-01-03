@@ -1,0 +1,9 @@
+@use "../abstracts/" as *;
+@use "./comment-input" as commentArea;
+
+article {
+    transition: all 0.15s ease-in-out;
+    &[contenteditable="true"] {
+        @extend commentArea, .comment-area !optional;
+    }
+}

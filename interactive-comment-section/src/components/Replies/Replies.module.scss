@@ -1,0 +1,36 @@
+@use "../CommentsSection/CommentsSection.module.scss" as *;
+@use "../../stylesheets/abstracts/" as *;
+
+.replies-section {
+  //display: flex;
+
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  //column-gap: map-get($gutters, "g-1");
+
+  justify-items: center;
+
+  //align-items: flex-start;
+
+  .replies {
+    @extend .comments-section;
+  }
+
+  &__left-separator {
+    border: 1px groove $gray-200;
+    margin-inline: map-get($gutters, "g-3");
+    max-width: 0px;
+    // width: 100%;
+  }
+
+  //margin-left: 10%;
+}
+
+@media (max-width: $small) {
+  .replies-section {
+    justify-items: flex-start;
+    &__left-separator {
+      margin-left: 0;
+    }
+  }
+}

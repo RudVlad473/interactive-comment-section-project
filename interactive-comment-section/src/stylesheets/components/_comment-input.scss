@@ -1,0 +1,38 @@
+@use "../abstracts/" as *;
+
+.comment-area {
+    width: 100%;
+
+    padding: map-get($gutters, "g-1") * 0.5 map-get($gutters, "g-2");
+
+    outline: 1px solid $gray-200;
+    border-radius: $br;
+    border: 1px solid $gray-200;
+
+    background-color: white;
+
+    transition: all 0.1s ease-in;
+
+    resize: none;
+
+    &:focus {
+        border-color: $blue-300;
+    }
+}
+
+textarea::-webkit-scrollbar {
+    width: 0.5em;
+
+    border-radius: 0 $br $br 0;
+}
+
+textarea::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+
+    border-radius: 0 $br $br 0;
+}

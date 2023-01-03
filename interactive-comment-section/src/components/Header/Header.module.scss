@@ -1,0 +1,10 @@
+.header {
+  grid-area: user-details;
+  justify-content: space-between;
+
+  &,
+  & > * {
+    display: flex;
+    align-items: center;
+  }
+}
